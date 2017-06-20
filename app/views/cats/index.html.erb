@@ -1,0 +1,8 @@
+<h1>99 Cat's</h1>
+
+<ul>
+    <% @cat.each do |cat| %>
+    <li> <%= cat.name %> </li>
+    <%= link_to "show", cat_url(cat) %>
+    <% end %>
+</ul>
