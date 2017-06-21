@@ -1,16 +1,13 @@
-<h1>99 Cat's</h1>
+<h1 style="color: pink"><%= @cat.all.count %> cats</h1>
 
-<ul>
+<ul style="list-style-type: lower-roman">
     <% @cat.each do |cat| %>
     <li> <%= cat.name %> </li>
     <%= link_to "show", cat_url(cat) %>
+    <%= link_to "edit", edit_cat_url(cat) %>
     <% end %>
 </ul>
 
 <section>
   <%= link_to "Add Cat", new_cat_url %>
-</section>
-
-<section>
-  <%= link_to "Edit Cat", edit_cat_url(@cat) %>
 </section>
